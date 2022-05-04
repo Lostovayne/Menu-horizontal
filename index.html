@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Menu vertical responsive</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<nav>
+			<!-- Esto es un menu vertical para Mobile -->
+			<div class="mobile">
+				<div class="header">
+					<div class="logo">Logo</div>
+					<div class="more">
+						<button id="bmore"><i class="bx bx-menu"></i></button>
+					</div>
+				</div>
+
+				<div id="links" class="links collapsed">
+					<a href="#">Services</a>
+					<a href="#">About</a>
+					<a href="#">Contact</a>
+					<a href="#">Search</a>
+					<a href="#">Sign up</a>
+					<a href="#">Login</a>
+				</div>
+			</div>
+
+			<!-- Esto es un menu vertical para Desktop -->
+
+			<div class="desktop">
+				<div class="logo">Logo</div>
+
+				<div class="primary">
+					<a href="#">Services</a>
+					<a href="#">About</a>
+					<a href="#">Contact</a>
+				</div>
+
+				<div class="secondary full">
+					<a href="#">Search</a>
+					<a href="#">Sign up</a>
+					<a href="#">Login</a>
+				</div>
+
+				<!-- Esto es un menu vertical para Desktop mini -->
+
+				<div class="secondary mini">
+					<a href="#" class="more">More</a>
+					<div class="submenu">
+						<a href="#">Search</a>
+						<a href="#">Sign up</a>
+						<a href="#">Login</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<script>
+			const bmore = document.querySelector("#bmore");
+			const links = document.querySelector("#links");
+			bmore.addEventListener("click", (e) => {
+				links.classList.toggle("collapsed");
+			});
+		</script>
+	</body>
+</html>
